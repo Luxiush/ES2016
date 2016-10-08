@@ -24,26 +24,30 @@
    1. #####下载[jdk-8u40-linux-x64](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
    2. #####将安装包解压到 /usr/lib/jvm
+      ```
       cd /usr/lib
       sudo mkdir jvm
       sudo tar zxvf ./jdk-8u40-linux-x64.gz -C /usr/lib/jvm
       cd /usr/lib/jvm
-
+      ```
    3. #####配置环境变量
       sudo gedit ~/.bashrc (在打开的文件的末尾添加JDK所在路径)
+      ```
       	# enable jdk environment
       	export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-amd64
       	export JRE_HOME=${JAVA_HOME}/jre
       	export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
       	export PATH=${JAVA_HOME}/bin:$PATH
+      ```
       保存退出，然后输入下面的命令来使之生效
       source ~/.bashrc
 
    4. #####配置默认JDK
+      ```
       sudo update-alternatives --install /usr/bin/java java  /usr/lib/jvm/java-1.7.0-openjdk-amd64/bin/java 300
       sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/java-1.7.0-openjdk-amd64/bin/javac 300
       (/usr/lib/jvm/java-1.7.0-openjdk-amd64为JDK所在路径)
-
+      ```
       ![Alt default_jdk](./pic/default_jdk.png)
       sudo update-alternatives --config java	查看当前各种JDK版本和配置
       ![Alt jdk_config](./pic/jdk_config.png)
@@ -63,17 +67,19 @@
 
 4. ####安装SystemC
    1. #####安装与配置
+      ```
       sudo tar -zxvf systemc-2.3.1.tgz -C /home
       cd /home/systemc-2.3.1
       sudo mkdir objdir
       cd objdir
       ../configure --disable-async-updates	 # 进行环境验证
+      ```
       ![Alt 环境验证](./pic/环境验证.png)
-
+      ```
       sudo make			
       sudo make check
       sudo make install
-
+      ```
    2. #####测试 
       ###### a. 编写hello.h文件
       ```c++
@@ -97,7 +103,6 @@
       #include "hello.h"
       #else
       #include "systemc.h"
-
       class hello : public sc_module{
       public:
           hello(sc_module_name name) : sc_module(name){
