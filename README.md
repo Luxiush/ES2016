@@ -44,21 +44,21 @@
       sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/java-1.7.0-openjdk-amd64/bin/javac 300
       (/usr/lib/jvm/java-1.7.0-openjdk-amd64为JDK所在路径)
 
-      ![Alt default_jdk](./default_jdk.png)
+      ![Alt default_jdk](./pic/default_jdk.png)
       sudo update-alternatives --config java	查看当前各种JDK版本和配置
-      ![Alt jdk_config](./jdk_config.png)
+      ![Alt jdk_config](./pic/jdk_config.png)
 
    5. #####通过以下命令验证配置是否成功
       java -version	  # 查看JDK版本
       java
       javac
-      ![Alt java_version](./java_version.png)
+      ![Alt java_version](./pic/java_version.png)
 
 3. ####安装 Ant (version 1.6.5 or greater) 
    (参考教程：<http://www.cnblogs.com/shitouer/archive/2011/08/31/2160467.html>)
    sudo apt-get install ant
    使用 ant命令验证安装成功
-   ![Alt ant__success](./ant_success.png)
+   ![Alt ant__success](./pic/ant_success.png)
 
 
 4. ####安装SystemC
@@ -68,7 +68,7 @@
       sudo mkdir objdir
       cd objdir
       ../configure --disable-async-updates	 # 进行环境验证
-      ![Alt 环境验证](环境验证.png)
+      ![Alt 环境验证](./pic/环境验证.png)
 
       sudo make			
       sudo make check
@@ -129,7 +129,7 @@
       ```
 
       ###### d.将上述文件放在同一个目录下,cd进入该目录 make之后即可通过 ./hello运行成功信息如下：
-      ![](./hello.png)
+      ![](./pic/hello.png)
 
 
 
@@ -144,16 +144,16 @@
       <property name="systemc.inc" value="YYY/include"/>
       <property name="systemc.lib" value="YYY/lib-linux/libsystemc.a"/>
       （YYY为systemc的安装路径）
-      ![](./dol_set_property.png)
+      ![](./pic/dol_set_property.png)
 
    3. #####编译DOL
       ant -f build_zip.xml all
-      ![Alt dol-build-success](./dol_build_success.png)
+      ![Alt dol-build-success](./pic/dol_build_success.png)
 
    4. #####运行示例
       cd build/bin/main
       ant -f runexample.xml -Dnumber=1
-      ![Alt dol-run-success](./dol-run-success.png)
+      ![Alt dol-run-success](./pic/dol-run-success.png)
 
       ##### 至此，DOL安装完成。
 
