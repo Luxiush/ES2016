@@ -18,7 +18,7 @@
    sudo apt-get update        	
    sudo apt-get install g++
    g++				（ 通过g++ 命令验证安装是否成功）
-   安装成功：![Alt g++success](./g++.png)
+   安装成功：![Alt g++success](./pic/g++.png)
 
 2. ####配置Java环境
    1. #####下载[jdk-8u40-linux-x64](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
