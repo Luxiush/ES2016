@@ -129,7 +129,7 @@
       ```
 
       ###### d.将上述文件放在同一个目录下,cd进入该目录 make之后即可通过 ./hello运行成功信息如下：
-      ![](./pic/hello.png)
+      ![Alt hello](./pic/hello.png)
 
 
 
@@ -144,7 +144,7 @@
       <property name="systemc.inc" value="YYY/include"/>
       <property name="systemc.lib" value="YYY/lib-linux/libsystemc.a"/>
       （YYY为systemc的安装路径）
-      ![](./pic/dol_set_property.png)
+      ![Alt set_property](./pic/dol_set_property.png)
 
    3. #####编译DOL
       ant -f build_zip.xml all
