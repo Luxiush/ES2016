@@ -144,16 +144,16 @@
       <property name="systemc.inc" value="YYY/include"/>
       <property name="systemc.lib" value="YYY/lib-linux/libsystemc.a"/>
       （YYY为systemc的安装路径）
-      ![Alt set_property](./pic/dol_set_property.png)
+      ![Alt set_property](./pic/dol_set_property.PNG)
 
    3. #####编译DOL
       ant -f build_zip.xml all
-      ![Alt dol-build-success](./pic/dol_build_success.png)
+      ![Alt dol-build-success](./pic/dol_build_success.PNG)
 
    4. #####运行示例
       cd build/bin/main
       ant -f runexample.xml -Dnumber=1
-      ![Alt dol-run-success](./pic/dol-run-success.png)
+      ![Alt dol-run-success](./pic/dol-run-success.PNG)
 
       ##### 至此，DOL安装完成。
 
